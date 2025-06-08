@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動漫 - 沈立丞的興趣</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right bottom, #f0f9ff, #a5f3fc, #67e8f9);
+        }
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #06b6d4;
+            display: inline-block;
+        }
+        .anime-card-link {
+            display: block; /* 讓整個卡片區域可點擊 */
+            text-decoration: none; /* 移除連結下劃線 */
+            color: inherit; /* 繼承文字顏色 */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border-radius: 0.5rem; /* 與圖片一致的圓角 */
+            overflow: hidden; /* 確保內容在圓角內 */
+        }
+        .anime-card-link:hover {
+            transform: translateY(-5px) scale(1.03); /* 滑鼠懸停時上浮和放大效果 */
+            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6">
+    <div class="w-full max-w-4xl content-card p-6 sm:p-8 md:p-10 text-center">
+        <h1 class="section-title">動漫 🎬</h1>
+        <p class="text-slate-700 text-lg leading-relaxed mb-8">
+            動漫是我放鬆身心的窗口，這是我最近追的番:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <!-- Lycoris Recoil 動漫卡片 -->
+            <a href="https://lycoris-recoil.com/" class="anime-card-link bg-white shadow-md">
+                <div>
+                    <!-- 使用實際的 Lycoris Recoil 封面圖片連結 -->
+                    <img src="https://github.com/11222103/11222103.github.io/blob/main/R.jpg?raw=true" alt="Lycoris Recoil 封面" class="rounded-t-lg w-full h-48 object-cover">
+                    <p class="text-slate-600 text-sm mt-2 p-4">Lycoris Recoil 莉可麗絲 (前往官網)</p>
+                </div>
+            </a>
+            <!-- 炎炎消防隊 動漫卡片 -->
+            <a href="https://fireforce-anime.jp/" class="anime-card-link bg-white shadow-md">
+                <div>
+                    <!-- 使用實際的 炎炎消防隊 封面圖片連結 -->
+                    <img src="https://github.com/11222103/11222103.github.io/blob/main/OIP.jpg?raw=true" alt="炎炎消防隊 封面" class="rounded-t-lg w-full h-48 object-cover">
+                    <p class="text-slate-600 text-sm mt-2 p-4">炎炎消防隊 (前往官網)</p>
+                </div>
+            </a>
+        </div>
+        <a href="自我介紹.html" class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-md text-lg font-medium transition-colors">
+            返回個人網站
+        </a>
+    </div>
+</body>
+</html>

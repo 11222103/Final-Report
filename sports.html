@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>運動 - 沈立丞的興趣</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right bottom, #f0f9ff, #a5f3fc, #67e8f9);
+        }
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #06b6d4;
+            display: inline-block;
+        }
+        /* 讓 iframe 響應式 */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 長寬比 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem; /* 與圖片一致的圓角 */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6">
+    <div class="w-full max-w-4xl content-card p-6 sm:p-8 md:p-10 text-center">
+        <h1 class="section-title">運動 ⚽</h1>
+        <p class="text-slate-700 text-lg leading-relaxed mb-8">
+            運動是我保持健康和活力的重要方式。
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/x_ruhi053n8" 
+                        title="潛水影片" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                    ></iframe>
+                </div>
+                <p class="text-slate-600 text-sm mt-2">潛水影片</p>
+            </div>
+            <div>
+                <img src="https://github.com/11222103/11222103.github.io/blob/main/biking.jpg?raw=true" alt="騎腳踏車" class="rounded-lg shadow-md w-full h-auto object-cover">
+                <p class="text-slate-600 text-sm mt-2">biking</p>
+            </div>
+        </div>
+        <a href="自我介紹.html" class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-md text-lg font-medium transition-colors">
+            返回個人網站
+        </a>
+    </div>
+</body>
+</html>
