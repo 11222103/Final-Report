@@ -28,16 +28,34 @@
             display: inline-block;
         }
         .anime-card-link {
-            display: block; /* 讓整個卡片區域可點擊 */
-            text-decoration: none; /* 移除連結下劃線 */
-            color: inherit; /* 繼承文字顏色 */
+            display: flex; 
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            border-radius: 0.5rem; /* 與圖片一致的圓角 */
-            overflow: hidden; /* 確保內容在圓角內 */
+            border-radius: 0.5rem;
+            overflow: hidden;
+            background-color: white; /* 確保卡片背景為白色 */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         .anime-card-link:hover {
-            transform: translateY(-5px) scale(1.03); /* 滑鼠懸停時上浮和放大效果 */
+            transform: translateY(-5px) scale(1.03);
             box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        .image-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f9ff;
+            min-height: 20rem;
+            padding: 1rem;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            max-height: 18rem;
+            border-radius: 0.25rem;
         }
     </style>
 </head>
@@ -48,17 +66,17 @@
             動漫是我放鬆身心的窗口，這是我最近追的番:
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <a href="https://lycoris-recoil.com/" class="anime-card-link bg-white shadow-md">
-                <div>
-                    <img src="https://github.com/11222103/11222103.github.io/blob/main/R.jpg?raw=true" alt="Lycoris Recoil 封面" class="rounded-t-lg w-full h-48 object-cover">
-                    <p class="text-slate-600 text-sm mt-2 p-4">Lycoris Recoil 莉可麗絲 (前往官網)</p>
+            <a href="https://lycoris-recoil.com/" class="anime-card-link">
+                <div class="image-container">
+                    <img src="https://github.com/11222103/11222103.github.io/blob/main/R.jpg?raw=true" alt="Lycoris Recoil 封面"class="rounded-t-lg w-full h-82 object-cover">
                 </div>
+                <p class="text-slate-600 text-sm mt-2 p-4">Lycoris Recoil 莉可麗絲 (前往官網)</p>
             </a>
-            <a href="https://fireforce-anime.jp/" class="anime-card-link bg-white shadow-md">
-                <div>
-                    <img src="https://github.com/11222103/11222103.github.io/blob/main/OIP.jpg?raw=true" alt="炎炎消防隊 封面" class="rounded-t-lg w-full h-48 object-cover">
-                    <p class="text-slate-600 text-sm mt-2 p-4">炎炎消防隊 (前往官網)</p>
+            <a href="https://fireforce-anime.jp/" class="anime-card-link">
+                <div class="image-container">
+                    <img src="https://github.com/11222103/11222103.github.io/blob/main/OIP%20.jpg?raw=true" alt="炎炎消防隊 封面">
                 </div>
+                <p class="text-slate-600 text-sm mt-2 p-4">炎炎消防隊 (前往官網)</p>
             </a>
         </div>
         <a href="index1.html" class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-md text-lg font-medium transition-colors">
